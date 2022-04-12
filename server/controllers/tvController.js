@@ -56,3 +56,4 @@ exports.getTrending = async (req, res) => {
     console.log(err);
   }
 };
+console.log(process.env.TMDB_API_KEY);
