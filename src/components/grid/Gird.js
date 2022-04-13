@@ -14,12 +14,8 @@ function Grid(props) {
       .catch((err) => console.log(err));
   }, [props.url]);
 
-  const date = {
-    year: new Date().getFullYear(),
-    month: new Date().getMonth(),
-    day: new Date().getDay(),
-  };
-  console.log(date.year, date.month, date.day);
+  console.log(data);
+
   return (
     <div className="grid">
       <h2 className="grid__title"> {props.title}</h2>
@@ -34,6 +30,7 @@ function Grid(props) {
                   alt={i.title}
                 />
                 <h5 className="grid__title">{i.title || i.name}</h5>
+                <span className="grid__date">{i.release_date}</span>
               </div>
             </Link>
           </div>

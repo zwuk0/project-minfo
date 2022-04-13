@@ -20,3 +20,6 @@
 .home__link:hover {
   transform: scale(1.1);
 }
+.movie__trailer--hidden {
+  display: none;
+}

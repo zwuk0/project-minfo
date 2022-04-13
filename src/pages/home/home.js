@@ -53,11 +53,23 @@ function Home() {
               <Grid
                 title={"Upcoming Movies"}
                 link={"/movie"}
-                url={"/api/movie/upcoming"}
+                filter={true}
+                url={"/api/movie/discover"}
               />
             }
           />
         </Routes>
+        <div className="home__nav">
+          <Link className="home__link" to={"/"}>
+            Trending
+          </Link>
+          <Link className="home__link" to={"popular"}>
+            Popular
+          </Link>
+          <Link className="home__link" to={"upcoming"}>
+            Upcomming
+          </Link>
+        </div>
       </div>
     </div>
   );

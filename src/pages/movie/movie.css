@@ -1,32 +1,83 @@
 .movie {
-  margin-top: 2em;
+  margin-top: 4em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .movie__trailer {
   max-width: 90em;
-  width: 100%;
+  width: 95%;
 }
 .movie__content {
   color: white;
-  width: 100%;
+  width: 95%;
   max-width: 90em;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 2em;
-  justify-content: space-between;
+}
+.movie__content--left {
+  grid-column: 1 / span 2;
 }
 .movie__title {
-  font-size: 4em;
+  font-size: 3.5em;
+  margin-right: 1em;
 }
 .movie__subtitle {
-  display: flex;
   list-style: none;
+  margin-top: 0.5em;
 }
 .movie-subtitle__item {
-  margin-right: 5px;
+  margin: 0px 3px;
+  margin-top: 0.5em;
+  font-weight: 200;
+}
+.movie__overview {
+  margin-top: 0.5em;
+  max-width: 80ch;
+  font-size: 1.25em;
 }
 .movie__poster {
   width: 100%;
-  max-width: 15em;
+  max-width: 18em;
+  margin-left: 1em;
+}
+.reviews {
+  width: 95%;
+  max-width: 90em;
+  color: #ffffff;
+}
+.movie__recom {
+  width: 95%;
+  max-width: 90em;
+  padding-bottom: 10px;
+  overflow-x: scroll;
+  margin-top: 2em;
+}
+
+.movie__recom::-webkit-scrollbar {
+  background-color: rgba(160, 160, 252, 0.219);
+  border-radius: 10px;
+  height: 10px;
+}
+.movie__recom::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.recom__row {
+  width: 100%;
+  display: flex;
+}
+.recom-row__item {
+  margin: 5px;
+}
+.recom__img {
+  width: 15em;
+  height: 100%;
+}
+.recom__img img {
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
 }
