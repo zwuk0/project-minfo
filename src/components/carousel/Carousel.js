@@ -56,14 +56,6 @@ function Carousel() {
                 <div className="ca-slide__ratings">
                   <span>Ratings: {i.vote_average}⭐</span>
                   <span>{truncate(i.release_date, 0, 4)}</span>
-                  {/* <span>
-                    <iframe
-                      src="https://www.youtube.com/embed/E7wJTI-1dvQ"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                      title="video"
-                    />
-                  </span> */}
                 </div>
                 <p className="ca-slide__description">
                   {" "}
