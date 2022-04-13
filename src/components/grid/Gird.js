@@ -14,8 +14,6 @@ function Grid(props) {
       .catch((err) => console.log(err));
   }, [props.url]);
 
-  console.log(data);
-
   return (
     <div className="grid">
       <h2 className="grid__title"> {props.title}</h2>

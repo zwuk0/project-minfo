@@ -12,6 +12,7 @@ function Movie() {
     movie: [],
     trailers: [],
     recommendations: [],
+    hideRecom: false,
   });
 
   // All the Fetch APIs are wrapped inside useEffect to stop rerendering everytime.
@@ -52,7 +53,7 @@ function Movie() {
 
   // track mouse wheel to scroll horizontally in movie recommendations section.
   useEffect(() => {
-    const scrollContainer = document.querySelector(".movie__recom");
+    const scrollContainer = document.querySelector(".recom__content");
     scrollContainer.addEventListener("wheel", (e) => {
       e.preventDefault();
 
@@ -66,7 +67,7 @@ function Movie() {
     let minutes = time - 60 * hour;
     return hour + "h " + minutes + "m";
   };
-
+  console.log();
   return (
     <div className="movie">
       {state.trailers
@@ -118,15 +119,24 @@ function Movie() {
         </div>
       </div>
 
-      <div className="movie__recom">
-        <div className="recom__row">
-          {state.recommendations.map((i) => (
-            <div key={i.id + "m"} className="recom-row__item">
-              <div className="recom__img">
-                <img src={`${imgBaseUrl}${i.poster_path}`} alt={i.title} />
+      <div
+        className={
+          state.recommendations.length !== 0
+            ? "movie__recom"
+            : "movie__recom--hide"
+        }
+      >
+        <h1>Recommendations</h1>
+        <div className="recom__content">
+          <div className="recom__row">
+            {state.recommendations.map((i) => (
+              <div key={i.id + "m"} className="recom-row__item">
+                <div className="recom__img">
+                  <img src={`${imgBaseUrl}${i.poster_path}`} alt={i.title} />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
