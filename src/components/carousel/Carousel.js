@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
-// import axios from "../../axios";
-import axios from "axios";
+import axios from "../../axios";
+
 import "./Carousel.css";
 import { Link } from "react-router-dom";
 
@@ -13,11 +13,9 @@ function Carousel() {
   const imgBaseUrl = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
-    axios
-      .get("https://minfo-zwuk0.vercel.app/api/movie/now_playing")
-      .then((res) => {
-        setMovies(res.data.results);
-      });
+    axios.get("/api/movie/now_playing").then((res) => {
+      setMovies(res.data.results);
+    });
   }, []);
 
   const settings = {
