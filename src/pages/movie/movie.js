@@ -81,7 +81,6 @@ function Movie() {
                 src={`https://www.youtube.com/embed/${i.key}`}
                 frameBorder="0"
                 width="100%"
-                height="720"
                 className="youtube__video"
               ></iframe>
             ) : (
@@ -95,6 +94,13 @@ function Movie() {
         ))}
       <div className="movie__content">
         <div className="movie__content--left">
+          <img
+            src={`${imgBaseUrl}${state.movie.poster_path}`}
+            alt={state.movie.title}
+            className="movie__poster"
+          />
+        </div>
+        <div className="movie__content--right">
           <h4 className="movie__title">{state.movie.title}</h4>
 
           <p className="movie__overview">{state.movie.overview}</p>
@@ -110,13 +116,6 @@ function Movie() {
             </li>
           </ul>
         </div>
-        <div className="movie__content--right">
-          <img
-            src={`${imgBaseUrl}${state.movie.poster_path}`}
-            alt={state.movie.title}
-            className="movie__poster"
-          />
-        </div>
       </div>
 
       <div
@@ -126,7 +125,7 @@ function Movie() {
             : "movie__recom--hide"
         }
       >
-        <h1>Recommendations</h1>
+        <h2>Recommendations</h2>
         <div className="recom__content">
           <div className="recom__row">
             {state.recommendations.map((i) => (

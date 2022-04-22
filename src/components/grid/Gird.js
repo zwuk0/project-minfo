@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../axios";
+import truncate from "../../helpers/truncate";
 import "./Grid.css";
 
 function Grid(props) {
@@ -16,7 +17,7 @@ function Grid(props) {
 
   return (
     <div className="grid">
-      <h2 className="grid__title"> {props.title}</h2>
+      <h2 className="grid__head"> {props.title}</h2>
       <div className="grid__content">
         {data.slice(0, 18).map((i) => (
           <div key={i.id + "g"} className="grid-items">
@@ -27,17 +28,14 @@ function Grid(props) {
                   src={imgBaseUrl + `${i.poster_path}`}
                   alt={i.title}
                 />
-                <h5 className="grid__title">{i.title || i.name}</h5>
+                <h6 className="grid__title">
+                  {truncate(i.title || i.name, 0, 25)}
+                </h6>
                 <span className="grid__date">{i.release_date}</span>
               </div>
             </Link>
           </div>
         ))}
-      </div>
-      <div className="view__more">
-        <Link className="view__link" to={"/2"}>
-          View More
-        </Link>
       </div>
     </div>
   );

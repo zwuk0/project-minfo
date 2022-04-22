@@ -17,12 +17,104 @@ export default function Navbar() {
             <Link className="nav__link" to={"/"}>
               Home
             </Link>
-            <Link className="nav__link" to={"/movies"}>
-              Movies
-            </Link>
-            <Link className="nav__link" to={"/tvshows"}>
-              Tv Shows
-            </Link>
+            <div className="header-nav__item">
+              <Link className="nav__link" to={"/movies"}>
+                Movies
+              </Link>
+              <div className="header-nav__dropdown">
+                <ul className="dropdown__ul">
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      hide
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="header-nav__item">
+              <Link className="nav__link" to={"/tvshows"}>
+                Tv Shows
+              </Link>
+              <div className="header-nav__dropdown">
+                <ul className="dropdown__ul">
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="nav__link" to={"/"}>
+                      fit
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="header__nav--right">
             <Search className="search" />
