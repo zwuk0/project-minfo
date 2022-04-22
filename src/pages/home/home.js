@@ -2,7 +2,6 @@ import "./home.css";
 import Carousel from "../../components/carousel/Carousel";
 import Grid from "../../components/grid/Gird";
 // import axios from "../../axios";
-import { Link, Route, Routes } from "react-router-dom";
 
 function Home() {
   return (
