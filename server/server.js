@@ -15,7 +15,7 @@ const tvRoute = require("./routes/tvRoute");
 
 // Setup default port
 const port = process.env.PORT || 4000;
-
+console.log(process.env.PORT);
 // Create express app
 const app = express();
 
@@ -28,13 +28,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
-  app.get("*", (req, res) => {
-    res.sendFile("build/index.html", { root: __dirname });
-  });
-}
+// if (process.env.NODE_ENV && process.env.NODE_ENV !== "development") {
+//   app.get("*", (req, res) => {
+//     res.sendFile("build/index.html", { root: __dirname });
+//   });
+// }
 
-app.use("/api/", searchRoute);
+app.use("/api", searchRoute);
 app.use("/api", movieRoute);
 app.use("/api", tvRoute);
 

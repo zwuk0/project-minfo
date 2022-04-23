@@ -25,13 +25,13 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "build": "node ./buildScript",
     "start-server": "cross-env NODE_ENV=development nodemon server/server.js --watch server/*",
     "start-front": "react-scripts start",
-    "build-front": "react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "concurrently \"npm run start-server\" \"npm run start-front\""
+    "start": "concurrently \"npm run start-server\" \"npm run start-front\"",
+    "now-build": "react-scripts build && mv build dist"
   },
   "eslintConfig": {
     "extends": [

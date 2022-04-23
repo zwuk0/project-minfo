@@ -1,5 +1,4 @@
 const axios = require("axios");
-require("dotenv").config();
 exports.getAllMovie = async (req, res) => {
   const show = req.params.show;
 
