@@ -17,11 +17,11 @@ function Movie() {
 
   // All the Fetch APIs are wrapped inside useEffect to stop rerendering everytime.
   useEffect(() => {
-    let trailers = `/api/movie/${params.id}/video`;
-    let details = `/api/movie/${params.id}`;
-    let recommendations = `/api/movie/${params.id}/recommendations`;
-    let similar = `/api/movie/${params.id}/similar`;
-    let reviews = `/api/movie/${params.id}/reviews`;
+    let trailers = `http://localhost:4000/api/movie/${params.id}/video`;
+    let details = `http://localhost:4000/api/movie/${params.id}`;
+    let recommendations = `http://localhost:4000/api/movie/${params.id}/recommendations`;
+    let similar = `http://localhost:4000/api/movie/${params.id}/similar`;
+    let reviews = `http://localhost:4000/api/movie/${params.id}/reviews`;
 
     const reqTrailers = axios.get(trailers);
     const reqDetails = axios.get(details);
